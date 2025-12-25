@@ -93,7 +93,8 @@ Character& Character::operator+=(const Item& item)
                 if(newItemStats > oldItemStats) {
                     inventory[i] = this->currentRoom->getItem();
                     this->currentRoom->setItem(oldItem);
-                    this->itemActionMsg = " ♻️ [SWAP] " + this->name + " discarded " + oldItem->getName() + " for the better " + item.getName() + ".\n" + item.getPrettyStats();
+                    this->itemActionMsg = " ♻️ [SWAP] " + this->name + " discarded " + oldItem->getName() + " for the better " + item.getName() + " - " + item.getPrettyStats();
+                    break;
                 }
                 this->itemActionMsg = " ✋ [KEEP] " + this->name + " decided to keep their " + item.getName() + " (It was stronger).";
                 break;

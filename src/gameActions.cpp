@@ -237,7 +237,7 @@ string Game::executeEnterDungeon(const Command &cmd)
         return Utils::buildErrMsg(cmd.lineNumber, "Must set a start room before entering the dungeon");
 
     character->setCurrentRoom(startRoom);
-    return " 🚪 [ENTER] " + character->getName() + " steps into the dungeon. The adventure begins!\n" + startRoom->getDescription();
+    return " 🚪 [ENTER] " + character->getName() + " steps into the dungeon. The adventure begins!\n" + character->getPrettyStats() + startRoom->getDescription() + "\n   ---------------------------------------\n";
 }
 
 // Execute Command - Move Character

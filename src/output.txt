@@ -1,128 +1,14 @@
-Commands must have at least 3 words - SKIPPING line 15
-Commands must have at least 3 words - SKIPPING line 82
-100 commands were loaded successfully
- 🏗️ [BUILD] Room constructed: 'Room01'.
- 🏗️ [BUILD] Room constructed: 'Room02'.
- 🏗️ [BUILD] Room constructed: 'Room03'.
- 🚫 [ERROR] (Line 12) Room name 'Room01' already exists
- 🚫 [ERROR] (Line 16) Invalid number of arguments in the command. Must follow the pattern of "Create Room <roomName>"
- 🏗️ [BUILD] Room constructed: 'Room04'.
- 🏗️ [BUILD] Room constructed: 'Room05'.
- 🏗️ [BUILD] Room constructed: 'Room06'.
- 🏗️ [BUILD] Room constructed: 'Room07'.
- 🏗️ [BUILD] Room constructed: 'Room08'.
- 🏗️ [BUILD] Room constructed: 'Room09'.
- 🏗️ [BUILD] Room constructed: 'Room10'.
- 🏗️ [BUILD] Room constructed: 'Room11'.
- 🏗️ [BUILD] Room constructed: 'Room12'.
- 🏗️ [BUILD] Room constructed: 'Room13'.
- 🏗️ [BUILD] Room constructed: 'Room14'.
- 🏗️ [BUILD] Room constructed: 'Room15'.
- 🏗️ [BUILD] Room constructed: 'Room16'.
- 🏗️ [BUILD] Room constructed: 'Room17'.
- 🏗️ [BUILD] Room constructed: 'Room18'.
- 🏗️ [BUILD] Room constructed: 'Room19'.
- 🏗️ [BUILD] Room constructed: 'Room20'.
- 🏗️ [BUILD] Room constructed: 'Room21'.
- 🏗️ [BUILD] Room constructed: 'Room22'.
- 🏗️ [BUILD] Room constructed: 'Room23'.
- 🏗️ [BUILD] Room constructed: 'Room24'.
- 🏗️ [BUILD] Room constructed: 'Room25'.
- 🚫 [ERROR] (Line 44) Capacity limit reached: Cannot create more than 25 rooms
- 🔗 [LINK] Connected 'Room01' north ↔ 'Room02'.
- 🔗 [LINK] Connected 'Room02' east ↔ 'Room03'.
- 🚫 [ERROR] (Line 52) Can't connect a room to itself
- 🚫 [ERROR] (Line 55) Room name 'Narnia' does not exist
- 🚫 [ERROR] (Line 56) Room name 'Atlantis' does not exist
- 🚫 [ERROR] (Line 59) Room 'Room01' is already connected to the room 'Room02' in that direction
- 🚫 [ERROR] (Line 62) Invalid direction. Must be one of [North, East, South, West]
- 🚫 [ERROR] (Line 66) Room 'Room02' is already connected to another room in the dungeon
+29 commands were loaded successfully
+ 🏗️ [BUILD] Room constructed: 'Room1'.
+ 🏗️ [BUILD] Room constructed: 'Room2'.
+ 🏗️ [BUILD] Room constructed: 'Room3'.
+ 🏗️ [BUILD] Room constructed: 'Room4'.
+ 🔗 [LINK] Connected 'Room1' north ↔ 'Room2'.
+ 🔗 [LINK] Connected 'Room2' east ↔ 'Room3'.
+ 🔗 [LINK] Connected 'Room3' south ↔ 'Room4'.
+ 📍 [SETUP] The journey is set to begin at 'Room1'.
  ✨ [CREATION] A new warrior named 'Thorin' has entered the world.
- ✨ [CREATION] A new mage named 'Merlin' has entered the world.
- ✨ [CREATION] A new thief named 'Garrett' has entered the world.
- 🚫 [ERROR] (Line 75) Invalid character class name: Paladin
- 🚫 [ERROR] (Line 76) Invalid character class name: Peasant
- 🚫 [ERROR] (Line 79) Character name 'Thorin' already exists
- ✨ [CREATION] A new warrior named 'Boromir' has entered the world.
- ✨ [CREATION] A new thief named 'Bilbo' has entered the world.
- 🚫 [ERROR] (Line 89) Capacity limit reached: Cannot create more than 5 characters
- 📦 [ITEM] The 'Sword' was placed in 'Room01'. [ +15 STR | +15 DEF ]
- 📦 [ITEM] The 'Wand' was placed in 'Room02'. [ +30 STR ]
- 📦 [ITEM] The 'Dagger' was placed in 'Room03'. [ +12 STR | +8 DEF ]
- 📦 [ITEM] The 'Shield' was placed in 'Room04'. [ +50 HP | +15 DEF ]
- 📦 [ITEM] The 'Health Potion' was placed in 'Room05'. [ +110 HP ]
- 🚫 [ERROR] (Line 101) Room name 'Narnia' does not exist
- 🚫 [ERROR] (Line 104) Health, Strength, Defense bonuses must be positive numbers or 0
- 🚫 [ERROR] (Line 107) Room 'Room01' already contains an item. Can't place more than 1 item in a room
- 🚫 [ERROR] (Line 110) Invalid item name: Gun
- ⚠️ [SPAWN] A 'Rat' now lurks in 'Room01'!
-   👹 [ENEMY] Rat
-   ❤️  HP: 10  |  💪 STR: 1  |  🛡️  DEF: 0
- ⚠️ [SPAWN] A 'Goblin' now lurks in 'Room02'!
-   👹 [ENEMY] Goblin
-   ❤️  HP: 30  |  💪 STR: 5  |  🛡️  DEF: 2
- ⚠️ [SPAWN] A 'Troll' now lurks in 'Room03'!
-   👹 [ENEMY] Troll
-   ❤️  HP: 60  |  💪 STR: 10  |  🛡️  DEF: 5
- ⚠️ [SPAWN] A 'Dragon' now lurks in 'Room25'!
-   👹 [ENEMY] Dragon
-   ❤️  HP: 200  |  💪 STR: 25  |  🛡️  DEF: 10
- 🚫 [ERROR] (Line 121) Can't create a monster with health or strength of 0. Must be a positive integer
- 🚫 [ERROR] (Line 122) Can't create a monster with health or strength of 0. Must be a positive integer
- ⚠️ [SPAWN] A 'M1' now lurks in 'Room06'!
-   👹 [ENEMY] M1
-   ❤️  HP: 10  |  💪 STR: 5  |  🛡️  DEF: 0
- ⚠️ [SPAWN] A 'M2' now lurks in 'Room07'!
-   👹 [ENEMY] M2
-   ❤️  HP: 10  |  💪 STR: 5  |  🛡️  DEF: 0
- ⚠️ [SPAWN] A 'M3' now lurks in 'Room08'!
-   👹 [ENEMY] M3
-   ❤️  HP: 10  |  💪 STR: 5  |  🛡️  DEF: 0
- ⚠️ [SPAWN] A 'M4' now lurks in 'Room09'!
-   👹 [ENEMY] M4
-   ❤️  HP: 10  |  💪 STR: 5  |  🛡️  DEF: 0
- ⚠️ [SPAWN] A 'M5' now lurks in 'Room10'!
-   👹 [ENEMY] M5
-   ❤️  HP: 10  |  💪 STR: 5  |  🛡️  DEF: 0
- ⚠️ [SPAWN] A 'M6' now lurks in 'Room11'!
-   👹 [ENEMY] M6
-   ❤️  HP: 10  |  💪 STR: 5  |  🛡️  DEF: 0
- 🚫 [ERROR] (Line 133) Capacity limit reached: Cannot create more than 10 monsters
- 🚫 [ERROR] (Line 137) Must set a start room before entering the dungeon
- 📍 [SETUP] The journey is set to begin at 'Room01'.
- 🚫 [ERROR] (Line 143) Room name 'Narnia' does not exist
  🚪 [ENTER] Thorin steps into the dungeon. The adventure begins!
-
-   📍 [LOCATION] You are currently in 'Room01'.
-      👹 [DANGER] A Rat is guarding this room!
-      ✨ [ITEM] You spot a Sword lying on the ground - [ +15 STR | +15 DEF ]
-      🧭 [EXITS]:
-         ⬆️  North -> Room02
-
- 🚪 [ENTER] Garrett steps into the dungeon. The adventure begins!
-
-   📍 [LOCATION] You are currently in 'Room01'.
-      👹 [DANGER] A Rat is guarding this room!
-      ✨ [ITEM] You spot a Sword lying on the ground - [ +15 STR | +15 DEF ]
-      🧭 [EXITS]:
-         ⬆️  North -> Room02
-
- 🚪 [ENTER] Merlin steps into the dungeon. The adventure begins!
-
-   📍 [LOCATION] You are currently in 'Room01'.
-      👹 [DANGER] A Rat is guarding this room!
-      ✨ [ITEM] You spot a Sword lying on the ground - [ +15 STR | +15 DEF ]
-      🧭 [EXITS]:
-         ⬆️  North -> Room02
-
- 🚫 [ERROR] (Line 151) Character 'Thorin' already entered the dungeon
-
-          ⚔️  [COMBAT STARTED]  ⚔️
-   ---------------------------------------
-   👹 [ENEMY] Rat
-   ❤️  HP: 10  |  💪 STR: 1  |  🛡️  DEF: 0
-   ---------------------------------------
-                     VS.
    ---------------------------------------
    HERO: Thorin  [Warrior]
    ❤️  HP:  100
@@ -131,150 +17,88 @@ Commands must have at least 3 words - SKIPPING line 82
    🎒  INVENTORY: [Empty]
    ---------------------------------------
 
-   🗡️  [PLAYER] Thorin attacks Rat >> Dealt 10 DMG (Enemy HP: 0)
-   🏆  [VICTORY] Thorin has slain the Rat!
+   📍 [LOCATION] You are currently in 'Room1'.
+      🧭 [EXITS]:
+         ⬆️  North -> Room2
 
    ---------------------------------------
 
- 🚫 [ERROR] (Line 159) The monster 'Goblin' is not in the same room as the character (Room01)
- 🚫 [ERROR] (Line 163) Monster 'Rat' does not exist
- 🚫 [ERROR] (Line 166) Monster 'Bigfoot' does not exist
+ 📦 [ITEM] The 'Sword' was placed in 'Room1'. [ +15 STR | +15 DEF ]
  🎒 [LOOT] Thorin equipped the Sword - [ +15 STR | +15 DEF ]
- 👣 [MOVE] Thorin marched north into 'Room02'.
+ 📦 [ITEM] The 'Sword' was placed in 'Room1'. [ +7 STR | +13 DEF ]
+ ✋ [KEEP] Thorin decided to keep their Sword (It was stronger).
+ 👣 [MOVE] Thorin marched north into 'Room2'.
 
-   📍 [LOCATION] You are currently in 'Room02'.
-      👹 [DANGER] A Goblin is guarding this room!
-      ✨ [ITEM] You spot a Wand lying on the ground - [ +30 STR ]
+   📍 [LOCATION] You are currently in 'Room2'.
       🧭 [EXITS]:
-         ➡️  East  -> Room03
-         ⬇️  South -> Room01
+         ➡️  East  -> Room3
+         ⬇️  South -> Room1
 
- 🚫 [ERROR] (Line 176) Character 'Thorin' attempted to move west. Cannot move that way; the path is blocked
- 🚫 [ERROR] (Line 180) There is no item in Room01 for Garrett to pick up
- 👣 [MOVE] Garrett marched north into 'Room02'.
+ 📦 [ITEM] The 'Sword' was placed in 'Room2'. [ +55 STR | +20 DEF ]
+ ♻️ [SWAP] Thorin discarded Sword for the better Sword - [ +55 STR | +20 DEF ]
+ 👣 [MOVE] Thorin marched east into 'Room3'.
 
-   📍 [LOCATION] You are currently in 'Room02'.
-      👹 [DANGER] A Goblin is guarding this room!
-      ✨ [ITEM] You spot a Wand lying on the ground - [ +30 STR ]
+   📍 [LOCATION] You are currently in 'Room3'.
       🧭 [EXITS]:
-         ➡️  East  -> Room03
-         ⬇️  South -> Room01
+         ⬇️  South -> Room4
+         ⬅️  West  -> Room2
 
- 🚫 [ERROR] (Line 185) Character of class 'Thief' can't pick up a Wand
- 👣 [MOVE] Garrett marched east into 'Room03'.
+ 📦 [ITEM] The 'Health Potion' was placed in 'Room3'. [ +110 HP ]
+ 🧪 [CONSUME] Thorin drank a Health Potion.
+   ---------------------------------------
+   HERO: Thorin  [Warrior]
+   ❤️  HP:  210
+   💪  STR: 15
+   🛡️  DEF: 10
+   🎒  INVENTORY:
+      • Sword ([ +55 STR | +20 DEF ])
+   ---------------------------------------
 
-   📍 [LOCATION] You are currently in 'Room03'.
-      👹 [DANGER] A Troll is guarding this room!
-      ✨ [ITEM] You spot a Dagger lying on the ground - [ +12 STR | +8 DEF ]
+ 👣 [MOVE] Thorin marched south into 'Room4'.
+
+   📍 [LOCATION] You are currently in 'Room4'.
       🧭 [EXITS]:
-         ⬅️  West  -> Room02
+         ⬆️  North -> Room3
 
- 🎒 [LOOT] Garrett equipped the Dagger - [ +12 STR | +8 DEF ]
- 👣 [MOVE] Garrett marched west into 'Room02'.
-
-   📍 [LOCATION] You are currently in 'Room02'.
-      👹 [DANGER] A Goblin is guarding this room!
-      ✨ [ITEM] You spot a Wand lying on the ground - [ +30 STR ]
-      🧭 [EXITS]:
-         ➡️  East  -> Room03
-         ⬇️  South -> Room01
-
- 👣 [MOVE] Garrett marched south into 'Room01'.
-
-   📍 [LOCATION] You are currently in 'Room01'.
-      🧭 [EXITS]:
-         ⬆️  North -> Room02
-
- 🔗 [LINK] Connected 'Room01' west ↔ 'Room05'.
- 👣 [MOVE] Garrett marched west into 'Room05'.
-
-   📍 [LOCATION] You are currently in 'Room05'.
-      ✨ [ITEM] You spot a Health Potion lying on the ground - [ +110 HP ]
-      🧭 [EXITS]:
-         ➡️  East  -> Room01
-
- 🧪 [CONSUME] Garrett drank a Health Potion.
+ 📦 [ITEM] The 'Shield' was placed in 'Room4'. [ +20 HP | +25 DEF ]
+ 🎒 [LOOT] Thorin equipped the Shield - [ +20 HP | +25 DEF ]
+ 📦 [ITEM] The 'Shield' was placed in 'Room4'. [ +100 HP | +105 DEF ]
+ ♻️ [SWAP] Thorin discarded Shield for the better Shield - [ +100 HP | +105 DEF ]
+ ✨ [CREATION] A new thief named 'Garrett' has entered the world.
+ 🚪 [ENTER] Garrett steps into the dungeon. The adventure begins!
    ---------------------------------------
    HERO: Garrett  [Thief]
-   ❤️  HP:  170
+   ❤️  HP:  60
    💪  STR: 20
    🛡️  DEF: 7
-   🎒  INVENTORY:
-      • Dagger ([ +12 STR | +8 DEF ])
-   ---------------------------------------
-
- 🚫 [ERROR] (Line 201) Character of class 'Warrior' can't pick up a Wand
- 🚫 [ERROR] (Line 204) Room 'Room02' already contains an item. Can't place more than 1 item in a room
- 🚫 [ERROR] (Line 206) Item 'Shield' is not in the same room as the character
- 🚫 [ERROR] (Line 209) Room 'Room02' already contains an item. Can't place more than 1 item in a room
- 🚫 [ERROR] (Line 211) Item name 'UberSword' is invalid
- 👣 [MOVE] Merlin marched north into 'Room02'.
-
-   📍 [LOCATION] You are currently in 'Room02'.
-      👹 [DANGER] A Goblin is guarding this room!
-      ✨ [ITEM] You spot a Wand lying on the ground - [ +30 STR ]
-      🧭 [EXITS]:
-         ➡️  East  -> Room03
-         ⬇️  South -> Room01
-
- 👣 [MOVE] Merlin marched east into 'Room03'.
-
-   📍 [LOCATION] You are currently in 'Room03'.
-      👹 [DANGER] A Troll is guarding this room!
-      🧭 [EXITS]:
-         ⬅️  West  -> Room02
-
-
-          ⚔️  [COMBAT STARTED]  ⚔️
-   ---------------------------------------
-   👹 [ENEMY] Troll
-   ❤️  HP: 60  |  💪 STR: 10  |  🛡️  DEF: 5
-   ---------------------------------------
-                     VS.
-   ---------------------------------------
-   HERO: Merlin  [Mage]
-   ❤️  HP:  40
-   💪  STR: 25
-   🛡️  DEF: 5
    🎒  INVENTORY: [Empty]
    ---------------------------------------
 
-   🗡️  [PLAYER] Merlin attacks Troll >> Dealt 20 DMG (Enemy HP: 40)
-   ⚔️  [ATTACK] Troll strikes Merlin for 5 damage! (Merlin HP: 35)
-   🗡️  [PLAYER] Merlin attacks Troll >> Dealt 20 DMG (Enemy HP: 20)
-   ⚔️  [ATTACK] Troll strikes Merlin for 5 damage! (Merlin HP: 30)
-   🗡️  [PLAYER] Merlin attacks Troll >> Dealt 20 DMG (Enemy HP: 0)
-   🏆  [VICTORY] Merlin has slain the Troll!
+   📍 [LOCATION] You are currently in 'Room1'.
+      ✨ [ITEM] You spot a Sword lying on the ground - [ +7 STR | +13 DEF ]
+      🧭 [EXITS]:
+         ⬆️  North -> Room2
 
    ---------------------------------------
 
- 👣 [MOVE] Merlin marched west into 'Room02'.
+ 👣 [MOVE] Garrett marched north into 'Room2'.
 
-   📍 [LOCATION] You are currently in 'Room02'.
-      👹 [DANGER] A Goblin is guarding this room!
-      ✨ [ITEM] You spot a Wand lying on the ground - [ +30 STR ]
+   📍 [LOCATION] You are currently in 'Room2'.
+      ✨ [ITEM] You spot a Sword lying on the ground - [ +15 STR | +15 DEF ]
       🧭 [EXITS]:
-         ➡️  East  -> Room03
-         ⬇️  South -> Room01
+         ➡️  East  -> Room3
+         ⬇️  South -> Room1
 
+ 🚫 [ERROR] (Line 67) Character of class 'Thief' can't pick up a Sword
 
 ==========================================
          📜  DUNGEON CHRONICLE  📜        
 ==========================================
 
    HERO: Thorin  [Warrior]
-   ❤️  HP:  100
-
-   HERO: Merlin  [Mage]
-   ❤️  HP:  30
+   ❤️  HP:  210
 
    HERO: Garrett  [Thief]
-   ❤️  HP:  170
-
-   HERO: Boromir  [Warrior]
-   ❤️  HP:  100
-
-   HERO: Bilbo  [Thief]
    ❤️  HP:  60
 ==========================================
 
