@@ -1,4 +1,5 @@
 #include "room.hpp"
+#include "monster.hpp"
 #include <string>
 using namespace std;
 
@@ -84,4 +85,46 @@ Monster* Room::getMonster() const
 string Room::getName() const
 {
     return this->name;
+}
+
+string Room::getDescription() const
+{
+    string desc = "\n   📍 [LOCATION] You are currently in '" + this->name + "'.\n";
+
+    // 1. Check for Monsters
+    if (this->monster != nullptr) {
+        desc += "      👹 [DANGER] A " + this->monster->getName() +" is guarding this room!\n";
+    }
+
+    // 2. Check for Items
+    if (this->item != nullptr) {
+        desc += "      ✨ [ITEM] You spot a " + this->item->getName() + " lying on the ground - " + this->item->getPrettyStats() + "\n";
+    }
+
+    // 3. List Connections (Exits)
+    desc += "      🧭 [EXITS]:\n";
+    bool hasExit = false;
+
+    if (this->north != nullptr) {
+        desc += "         ⬆️  North -> " + this->north->getName() + "\n";
+        hasExit = true;
+    }
+    if (this->east != nullptr) {
+        desc += "         ➡️  East  -> " + this->east->getName() + "\n";
+        hasExit = true;
+    }
+    if (this->south != nullptr) {
+        desc += "         ⬇️  South -> " + this->south->getName() + "\n";
+        hasExit = true;
+    }
+    if (this->west != nullptr) {
+        desc += "         ⬅️  West  -> " + this->west->getName() + "\n";
+        hasExit = true;
+    }
+
+    if (!hasExit) {
+        desc += "         🚫 None (Dead End)\n";
+    }
+
+    return desc;
 }

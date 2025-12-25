@@ -237,7 +237,7 @@ string Game::executeEnterDungeon(const Command &cmd)
         return Utils::buildErrMsg(cmd.lineNumber, "Must set a start room before entering the dungeon");
 
     character->setCurrentRoom(startRoom);
-    return " 🚪 [ENTER] " + character->getName() + " steps into the dungeon. The adventure begins!";
+    return " 🚪 [ENTER] " + character->getName() + " steps into the dungeon. The adventure begins!\n" + startRoom->getDescription();
 }
 
 // Execute Command - Move Character
@@ -283,7 +283,7 @@ string Game::executeMove(const Command &cmd)
     }
 
     string direction = Utils::toLowerCase(cmd.words[2]);
-    return " 👣 [MOVE] " + character->getName() + " marched " + direction + " into '" + character->getCurrentRoom()->getName() + "'.";
+    return " 👣 [MOVE] " + character->getName() + " marched " + direction + " into '" + character->getCurrentRoom()->getName() + "'.\n" + character->getCurrentRoom()->getDescription();
 }
 
 // Execute Command - Fight with a Monster
@@ -363,7 +363,7 @@ string Game::executePickUp(const Command &cmd)
 
     Item *itemInRoom = character->getCurrentRoom()->getItem();
     if (itemInRoom == nullptr)
-        return Utils::buildErrMsg(cmd.lineNumber, "There is no item in the room");
+        return Utils::buildErrMsg(cmd.lineNumber, "There is no item in " + character->getCurrentRoom()->getName() + " for " + character->getName() + " to pick up");
 
     if (itemName != itemInRoom->getItemEnum())
         return Utils::buildErrMsg(cmd.lineNumber, "Item '" + cmd.words[2] + "' is not in the same room as the character");

@@ -27,4 +27,5 @@ public:
     Item* getItem() const;
     Monster* getMonster() const;
     std::string getName() const;
+    std::string getDescription() const;
 };

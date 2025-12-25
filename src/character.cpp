@@ -132,12 +132,12 @@ string Character::getPrettyStats() const
     msg += "   🛡️  DEF: " + to_string(this->defense) + "\n";
     
     if (inventoryCount > 0) {
-        msg += "   🎒 INVENTORY:\n";
+        msg += "   🎒  INVENTORY:\n";
         for (int i = 0; i < inventoryCount; i++) {
             msg += "      • " + inventory[i]->getName() + " (" + inventory[i]->getPrettyStats() + ")\n";
         }
     } else {
-        msg += "   🎒 INVENTORY: [Empty]\n";
+        msg += "   🎒  INVENTORY: [Empty]\n";
     }
     msg += line;
     return msg;

@@ -52,7 +52,9 @@ Although all files reside in the root directory, they are logically categorized 
 * Standard C++11 or higher
 
 ### Compilation
-Since all files are in the same directory, compilation is straightforward. Open your terminal in the project folder and run:
+Since all files are in the same directory, compilation is straightforward. 
+First upload or modify the existing input.txt file to determine all the commands.
+Open your terminal in the project folder and run:
 
 ```bash
 # Compile all C++ source files

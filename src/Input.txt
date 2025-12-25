@@ -1,122 +1,225 @@
-// ==========================================
-//      DUNGEON STRESS TEST INPUT FILE
-// ==========================================
+// ============================================================
+//      ULTIMATE DUNGEON STRESS TEST (100+ COMMANDS)
+// ============================================================
 
-// --- SECTION 1: WORLD BUILDING ---
-cReAtE rOoM Entrance        // Messy caps (should work)
-Create Room Hallway         // Normal caps
-Create Room Armory
-Create Room Library
-Create Room BossLair
-Create Room Void            // An isolated room
+// --- PHASE 1: PARSING & ROOM LIMITS (0-25 Rooms) ---
+// 1. Basic Case Sensitivity & Whitespace
+cReAtE rOoM Room01
+Create    Room    Room02
+Create Room Room03
 
-// Edge Case: Creating a duplicate room (Should Error)
-Create Room Entrance
+// 2. Logic Error: Duplicate Name
+Create Room Room01
 
-// --- SECTION 2: CONNECTIONS ---
-Connect Entrance Hallway North
-Connect Hallway Armory East
-Connect Hallway Library West
-Connect Hallway BossLair North
+// 3. Logic Error: Word Count Validation
+Create Room
+Create Room A B C
 
-// Edge Case: Connecting to a non-existent room (Should Error)
-Connect Hallway Narnia East
+// 4. Stress Test: Filling the Array (MAX_ROOMS = 25)
+// We have 3. Need 22 more.
+Create Room Room04
+Create Room Room05
+Create Room Room06
+Create Room Room07
+Create Room Room08
+Create Room Room09
+Create Room Room10
+Create Room Room11
+Create Room Room12
+Create Room Room13
+Create Room Room14
+Create Room Room15
+Create Room Room16
+Create Room Room17
+Create Room Room18
+Create Room Room19
+Create Room Room20
+Create Room Room21
+Create Room Room22
+Create Room Room23
+Create Room Room24
+Create Room Room25
 
-// Edge Case: Invalid Direction (Should Error)
-Connect Armory Void Up
+// 5. Logic Error: Overflow (The 26th Room)
+Create Room RoomOverflow
 
-// --- SECTION 3: POPULATION (CHARACTERS) ---
+// --- PHASE 2: CONNECTIONS & TOPOLOGY ---
+// 1. Valid Connections
+Connect Room01 Room02 North
+Connect Room02 Room03 East
+
+// 2. Logic Error: Self-Connection
+Connect Room01 Room01 South
+
+// 3. Logic Error: Non-existent Room
+Connect Room01 Narnia West
+Connect Atlantis Room02 North
+
+// 4. Logic Error: Overwriting Existing Connection
+Connect Room01 Room04 North     // Room01 North is already Room02
+
+// 5. Logic Error: Invalid Direction
+Connect Room03 Room04 Up
+
+// 6. Logic Error: Connecting to an already linked room (Topology restriction)
+// Room02 is linked to 01 and 03. Let's try to link Room05 to Room02.
+Connect Room05 Room02 South
+
+// --- PHASE 3: CHARACTER LIMITS & CREATION (0-5 Chars) ---
+// 1. Valid Classes
 Create Warrior Thorin
 Create Mage Merlin
 Create Thief Garrett
 
-// Edge Case: Unknown Class (Should Error)
+// 2. Invalid Class
 Create Paladin Uther
+Create Peasant Arthur
 
-// Edge Case: Duplicate Name (Should Error)
+// 3. Duplicate Name
 Create Mage Thorin
 
-// --- SECTION 4: LOOT DISTRIBUTION ---
+// 4. Word Count
+Create Warrior
+
+// 5. Filling the Array (MAX_CHARACTERS = 5)
+Create Warrior Boromir
+Create Thief Bilbo
+
+// 6. Logic Error: Overflow (The 6th Character)
+Create Mage Gandalf
+
+// --- PHASE 4: ITEM LOGIC & PLACEMENT ---
 // Syntax: Place <ItemName> <RoomName> <HP> <STR> <DEF>
-Place Sword Armory 0 10 5
-Place Wand Library 0 15 2
-Place Dagger Entrance 0 5 5
-Place HealthPotion Hallway 50 0 0
+// 1. Valid Items
+Place Sword Room01 0 10 5
+Place Wand Room02 0 20 0
+Place Dagger Room03 0 5 5
+Place Shield Room04 50 0 10    // High HP bonus item
+Place HealthPotion Room05 100 0 0
 
-// Edge Case: Placing Item in non-existent room (Should Error)
-Place Shield Narnia 0 10 10
+// 2. Logic Error: Non-existent Room
+Place Sword Narnia 0 10 0
 
-// Edge Case: Negative Stats (Should Error)
-Place Sword Void -10 -5 0
+// 3. Logic Error: Negative Stats
+Place Sword Room06 -10 5 5
 
-// Edge Case: Placing 2nd item in same room (Should Error - Hallway has Potion)
-Place Shield Hallway 0 10 10
+// 4. Logic Error: Occupied Room (Room01 has Sword)
+Place Shield Room01 0 5 5
 
-// --- SECTION 5: THREATS (MONSTERS) ---
-// Note: "Place Monster" still requires the word 'Monster' 
-// because your Utils::extractCommandType looks for it specifically.
-Place Monster Rat Entrance 10 2 0           
-Place Monster Dragon BossLair 200 25 10     
+// 5. Logic Error: Invalid Item Name
+Place Gun Room07 0 100 0
 
-// Edge Case: Monster with 0 health (Should Error)
-Place Monster Ghost Library 0 5 0
+// --- PHASE 5: MONSTER LIMITS & PLACEMENT (0-10 Monsters) ---
+// Syntax: Place Monster <Name> <RoomName> <HP> <STR> <DEF>
+// 1. Valid Monsters
+Place Monster Rat Room01 10 1 0
+Place Monster Goblin Room02 30 5 2
+Place Monster Troll Room03 60 10 5
+Place Monster Dragon Room25 200 25 10
 
-// ==========================================
-//          GAMEPLAY SCENARIOS
-// ==========================================
+// 2. Logic Error: 0 Health/Strength
+Place Monster Ghost Room04 0 5 5
+Place Monster Slime Room04 10 0 0
 
-Set StartRoom Entrance
+// 3. Logic Error: Monster Overflow (Fill up to 10)
+Place Monster M1 Room06 10 5 0
+Place Monster M2 Room07 10 5 0
+Place Monster M3 Room08 10 5 0
+Place Monster M4 Room09 10 5 0
+Place Monster M5 Room10 10 5 0
+Place Monster M6 Room11 10 5 0
 
-// --- SCENARIO A: THE THIEF ---
-Enter Dungeon Garrett
+// 4. The 11th Monster (Should Fail)
+Place Monster OverflowMob Room12 10 5 0
 
-// 1. Pick up item in start room
-PickUp Garrett Dagger
-
-// 2. Move to Hallway
-Move Garrett North
-
-// 3. Try to move into a wall (Should Error)
-Move Garrett East 
-
-// 4. Consume Potion (Should boost stats and disappear)
-PickUp Garrett HealthPotion
-
-// 5. Move to Armory (Contains Sword)
-Move Garrett East
-
-// 6. Thief can't use Sword (Should Error)
-PickUp Garrett Sword
-
-// --- SCENARIO B: THE WARRIOR ---
+// --- PHASE 6: GAMEPLAY STARTUP ---
+// 1. Logic Error: Enter Dungeon before Set Start
 Enter Dungeon Thorin
 
-// 1. Fight the Rat immediately
-Fight Thorin Rat
+// 2. Set Start Room
+Set StartRoom Room01
 
-// 2. Move North -> East to get Sword
-Move Thorin North
-Move Thorin East
-PickUp Thorin Sword
+// 3. Logic Error: Set Invalid Start Room
+Set StartRoom Narnia
 
-// 3. Back track
-Move Thorin West
-
-// --- SCENARIO C: THE MAGE (DEATH TEST) ---
+// 4. Enter Dungeon
+Enter Dungeon Thorin
+Enter Dungeon Garrett
 Enter Dungeon Merlin
 
-// 1. Move North -> West to get Wand
-Move Merlin North
+// 5. Logic Error: Enter Twice
+Enter Dungeon Thorin
+
+// --- PHASE 7: COMBAT SCENARIOS ---
+// 1. Thorin vs Rat (Easy Win)
+Fight Thorin Rat
+
+// 2. Logic Error: Fight Monster not in room
+// Thorin is in Room01. Goblin is in Room02.
+Fight Thorin Goblin
+
+// 3. Logic Error: Fight Dead Monster
+// Rat is dead.
+Fight Thorin Rat
+
+// 4. Logic Error: Fight Non-existent Monster
+Fight Thorin Bigfoot
+
+// --- PHASE 8: MOVEMENT & INVENTORY ---
+// 1. Pickup Sword (Warrior Compatible)
+PickUp Thorin Sword
+
+// 2. Move Thorin
+Move Thorin North   // To Room02
+
+// 3. Logic Error: Move into Wall
+Move Thorin West    // Room02 only has connections South(01) and East(03)
+
+// 4. Garrett (Thief) Compatibility Test
+// Garrett is in Room01. There is no item (Thorin took it).
+PickUp Garrett Sword
+
+// 5. Move Garrett to Room02 (Has Wand)
+Move Garrett North
+// Thief cannot pick up Wand (Mage item)
+PickUp Garrett Wand
+
+// 6. Move Garrett to Room03 (Has Dagger)
+Move Garrett East
+PickUp Garrett Dagger
+
+// 7. Potion Consumption (Instant Use)
+Move Garrett West   // Back to Room02
+Move Garrett South  // Back to Room01
+// We need to connect Room01 to Room05 to get the potion
+Connect Room01 Room05 West
+Move Garrett West   // To Room05
+PickUp Garrett HealthPotion
+
+// --- PHASE 9: INVENTORY SWAPPING ---
+// Thorin is in Room02. Wand is there. Warrior can use Wand? (Depends on your code: usually No)
+PickUp Thorin Wand
+
+// Let's place a shield in Room02 for Thorin to swap
+Place Shield Room02 0 5 15
+// Thorin picks up Shield. He has Sword. Inventory: [Sword, Shield]. Max is 2.
+PickUp Thorin Shield
+
+// Let's place a BETTER Sword in Room02
+Place Sword Room02 0 50 50
+// Thorin picks up UberSword. Should SWAP with his weak Sword.
+PickUp Thorin UberSword
+
+// --- PHASE 10: DEATH SCENARIO ---
+// Merlin (Mage) goes to die.
+Move Merlin North   // To Room02
+Move Merlin East    // To Room03 (Troll is here)
+
+// Fight Troll (60 HP vs 40 HP Mage)
+Fight Merlin Troll
+
+// Logic Error: Dead Man Walking
 Move Merlin West
-PickUp Merlin Wand
 
-// 2. Go to Boss Lair
-Move Merlin East
-Move Merlin North
-
-// 3. Fight Dragon (Expected: DEFEAT)
-Fight Merlin Dragon
-
-// --- SCENARIO D: POST-DEATH LOGIC ---
-// Edge Case: Move dead character (Should Error)
-Move Merlin South
+// --- PHASE 11: CLEANUP ---
+// Check if game state prints correctly with 1 dead hero, 1 full inv hero, 1 thief.
