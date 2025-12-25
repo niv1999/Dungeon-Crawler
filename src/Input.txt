@@ -1,0 +1,371 @@
+// ============================================================
+// COMPREHENSIVE TEST SUITE FOR DUNGEON CRAWLER
+// Testing all edge cases, validations, and game logic
+// ============================================================
+
+// --- 1. BASIC VALID SETUP ---
+// Create rooms
+Create Room StartRoom
+Create Room RoomNorth
+Create Room RoomEast
+Create Room RoomSouth
+Create Room RoomWest
+Create Room ExtraRoom1
+Create Room ExtraRoom2
+Create Room ExtraRoom3
+Create Room ExtraRoom4
+Create Room ExtraRoom5
+Create Room ExtraRoom6
+Create Room ExtraRoom7
+Create Room ExtraRoom8
+Create Room ExtraRoom9
+Create Room ExtraRoom10
+Create Room ExtraRoom11
+Create Room ExtraRoom12
+Create Room ExtraRoom13
+Create Room ExtraRoom14
+Create Room ExtraRoom15
+Create Room ExtraRoom16
+Create Room ExtraRoom17
+Create Room ExtraRoom18
+Create Room ExtraRoom19
+Create Room ExtraRoom20
+Create Room ExtraRoom21
+Create Room ExtraRoom22
+Create Room ExtraRoom23
+Create Room ExtraRoom24
+Create Room ExtraRoom25
+
+// Connect rooms (tree structure, no loops)
+Connect StartRoom RoomNorth North
+Connect RoomNorth ExtraRoom1 East
+Connect ExtraRoom1 ExtraRoom2 South
+Connect ExtraRoom2 ExtraRoom3 West
+Connect ExtraRoom3 ExtraRoom4 North
+Connect ExtraRoom4 ExtraRoom5 East
+Connect ExtraRoom5 ExtraRoom6 South
+Connect ExtraRoom6 ExtraRoom7 West
+Connect ExtraRoom7 ExtraRoom8 North
+Connect ExtraRoom8 ExtraRoom9 East
+Connect ExtraRoom9 ExtraRoom10 South
+Connect ExtraRoom10 ExtraRoom11 West
+Connect ExtraRoom11 ExtraRoom12 North
+Connect ExtraRoom12 ExtraRoom13 East
+Connect ExtraRoom13 ExtraRoom14 South
+Connect ExtraRoom14 ExtraRoom15 West
+Connect ExtraRoom15 ExtraRoom16 North
+Connect ExtraRoom16 ExtraRoom17 East
+Connect ExtraRoom17 ExtraRoom18 South
+Connect ExtraRoom18 ExtraRoom19 West
+Connect ExtraRoom19 ExtraRoom20 North
+Connect ExtraRoom20 ExtraRoom21 East
+Connect ExtraRoom21 ExtraRoom22 South
+Connect ExtraRoom22 ExtraRoom23 West
+Connect ExtraRoom23 ExtraRoom24 North
+Connect ExtraRoom24 ExtraRoom25 East
+
+Connect StartRoom RoomEast East
+Connect StartRoom RoomSouth South
+Connect StartRoom RoomWest West
+
+// Set start room
+Set StartRoom StartRoom
+
+// Create characters
+Create Warrior Warrior1
+Create Mage Mage1
+Create Thief Thief1
+Create Warrior Warrior2
+Create Mage Mage2
+
+// Place items (one per room, valid bonuses)
+Place Sword StartRoom 0 10 5
+Place Wand RoomNorth 0 15 0
+Place Dagger RoomEast 0 8 3
+Place Shield RoomSouth 0 0 10
+Place HealthPotion RoomWest 20 0 0
+Place StrengthPotion ExtraRoom1 0 5 0
+Place DefensePotion ExtraRoom2 0 0 8
+Place Sword ExtraRoom3 0 20 10
+Place Wand ExtraRoom4 0 25 5
+Place Dagger ExtraRoom5 0 12 6
+
+// Place monsters (one per room, valid stats)
+Place Monster Goblin StartRoom 50 10 5
+Place Monster Orc RoomNorth 80 15 10
+Place Monster Troll RoomEast 120 20 15
+Place Monster Dragon RoomSouth 200 30 20
+Place Monster Skeleton RoomWest 40 8 3
+Place Monster Zombie ExtraRoom1 60 12 7
+Place Monster Vampire ExtraRoom2 100 18 12
+Place Monster Werewolf ExtraRoom3 90 16 9
+Place Monster Ghost ExtraRoom4 70 14 8
+Place Monster Minotaur ExtraRoom5 150 25 18
+
+// --- 2. INVALID COMMAND FORMATS ---
+// Too few words
+Create
+Create Room
+Create Warrior
+Set StartRoom
+Connect StartRoom RoomNorth
+Place Sword StartRoom 0
+Place Monster Goblin StartRoom 50
+Enter Dungeon
+Move Warrior1
+Fight Warrior1 Goblin
+PickUp Warrior1 Sword
+
+// Too many words
+Create Room StartRoom Extra
+Create Warrior Warrior1 Extra
+Set StartRoom StartRoom Extra
+Connect StartRoom RoomNorth North Extra
+Place Sword StartRoom 0 10 5 Extra
+Place Monster Goblin StartRoom 50 10 5 Extra
+Enter Dungeon Warrior1 Extra
+Move Warrior1 North Extra
+Fight Warrior1 Goblin Extra
+PickUp Warrior1 Sword Extra
+
+// Unknown commands
+Unknown Command
+Create House House1
+Place Weapon Sword StartRoom 0 10 5
+Fight Monster Goblin Warrior1
+
+// --- 3. CAPACITY LIMITS ---
+// Characters (max 5)
+Create Warrior Warrior3
+Create Mage Mage3
+Create Thief Thief2
+Create Warrior Warrior4
+Create Mage Mage4
+Create Thief Thief3  // Should fail
+Create Warrior Warrior5  // Should fail
+
+// Rooms (max 25) - already at 25, try more
+Create Room Room26  // Should fail
+
+// Monsters (max 10) - already at 10, try more
+Place Monster Beast ExtraRoom6 100 20 10  // Should fail
+
+// --- 4. UNIQUE NAME VIOLATIONS ---
+// Duplicate rooms
+Create Room StartRoom
+
+// Duplicate characters
+Create Warrior Warrior1
+
+// Duplicate monsters
+Place Monster Goblin ExtraRoom6 50 10 5
+
+// --- 5. INVALID CLASSES AND ITEMS ---
+// Invalid character classes
+Create Knight Knight1
+Create Archer Archer1
+Create Paladin Paladin1
+
+// Invalid item names
+Place Axe StartRoom 0 10 5
+Place Bow RoomNorth 0 15 0
+Place Armor RoomEast 0 0 10
+
+// --- 6. INVALID NUMERIC VALUES ---
+// Negative bonuses for items
+Place Sword ExtraRoom7 -1 10 5
+Place Sword ExtraRoom7 0 -5 5
+Place Sword ExtraRoom7 0 10 -3
+
+// Zero bonuses for items (should be ok, but test edge)
+Place Sword ExtraRoom7 0 0 0
+
+// Negative stats for monsters
+Place Monster Beast ExtraRoom7 -50 10 5
+Place Monster Beast ExtraRoom7 50 -10 5
+Place Monster Beast ExtraRoom7 50 10 -5
+
+// Zero health/strength for monsters
+Place Monster Beast ExtraRoom7 0 10 5
+Place Monster Beast ExtraRoom7 50 0 5
+
+// --- 7. ROOM OCCUPANCY ---
+// Place second item in same room
+Place Dagger StartRoom 0 8 3
+
+// Place second monster in same room
+Place Monster Beast RoomNorth 100 20 10
+
+// --- 8. CONNECTION ISSUES ---
+// Connect non-existent rooms
+Connect NonExistent RoomNorth North
+Connect StartRoom NonExistent North
+
+// Invalid directions
+Connect StartRoom RoomNorth Up
+Connect StartRoom RoomNorth Down
+Connect StartRoom RoomNorth Left
+
+// Self-connection
+Connect StartRoom StartRoom North
+
+// Overwrite existing connection
+Connect StartRoom ExtraRoom6 North  // StartRoom North already connected
+
+// Connect to already linked room (target linked)
+Connect ExtraRoom7 StartRoom South  // StartRoom is linked
+
+// --- 9. START ROOM ISSUES ---
+// Set non-existent start room
+Set StartRoom NonExistent
+
+// Set start room multiple times
+Set StartRoom RoomNorth
+
+// --- 10. ENTER DUNGEON ISSUES ---
+// Enter non-existent character
+Enter Dungeon NonExistent
+
+// Enter character already entered
+Enter Dungeon Warrior1
+Enter Dungeon Warrior1
+
+// Enter before setting start room (but we set it, so test by unsetting? Wait, can't unset)
+
+// --- 11. MOVE ISSUES ---
+// Move non-existent character
+Move NonExistent North
+
+// Move character not entered
+Move Warrior2 North
+
+// Invalid direction
+Move Warrior1 Up
+
+// Move into wall (no connection)
+Move Warrior1 South  // Assuming no south from StartRoom initially
+
+// --- 12. FIGHT ISSUES ---
+// Fight with non-existent character
+Fight NonExistent Goblin
+
+// Fight non-existent monster
+Fight Warrior1 NonExistent
+
+// Fight monster not in same room
+Fight Warrior1 Orc  // Orc in RoomNorth, Warrior1 in StartRoom
+
+// --- 13. PICKUP ISSUES ---
+// PickUp non-existent character
+PickUp NonExistent Sword
+
+// PickUp invalid item name
+PickUp Warrior1 Axe
+
+// PickUp when no item in room
+PickUp Warrior1 Sword  // But Sword already picked or not there
+
+// PickUp wrong item name (item exists but name mismatch)
+PickUp Warrior1 Dagger  // If Sword is there
+
+// PickUp incompatible item
+PickUp Warrior1 Wand  // Warrior can't pick Wand
+
+// --- 14. CLASS COMPATIBILITY TESTS ---
+// Warrior picks up compatible
+Enter Dungeon Warrior1
+PickUp Warrior1 Sword  // Compatible
+
+// Warrior tries incompatible
+PickUp Warrior1 Wand  // Incompatible
+
+// Mage picks up compatible
+Enter Dungeon Mage1
+Move Mage1 North
+PickUp Mage1 Wand  // Compatible
+
+// Mage tries incompatible
+PickUp Mage1 Sword  // Incompatible
+
+// Thief picks up compatible
+Enter Dungeon Thief1
+Move Thief1 East
+PickUp Thief1 Dagger  // Compatible
+
+// Thief tries incompatible
+PickUp Thief1 Sword  // Incompatible
+
+// --- 15. INVENTORY LOGIC ---
+// Equip new item (empty slot)
+Move Warrior1 East  // To RoomEast, has Dagger
+PickUp Warrior1 Dagger
+
+// Equip same type, worse (keep)
+Place Sword RoomEast 0 5 2  // Worse than current Sword
+PickUp Warrior1 Sword
+
+// Equip same type, better (swap)
+Place Sword RoomEast 0 30 15  // Better
+PickUp Warrior1 Sword
+
+// Equip different type (add to inventory)
+Move Warrior1 South  // To RoomSouth, has Shield
+PickUp Warrior1 Shield
+
+// Try to equip third item (full inventory)
+Place Sword RoomSouth 0 40 20  // New Sword
+PickUp Warrior1 Sword  // Should fail, inventory full
+
+// Potion consumption
+Move Warrior1 West  // To RoomWest, has HealthPotion
+PickUp Warrior1 HealthPotion  // Consume
+
+// --- 16. COMBAT TESTS ---
+// Simple fight (character wins)
+Fight Warrior1 Goblin
+
+// Character loses
+Enter Dungeon Warrior2
+Fight Warrior2 Dragon  // Dragon is strong
+
+// Monster not defeated in one hit
+Enter Dungeon Mage2
+Move Mage2 North
+Fight Mage2 Orc
+
+// --- 17. COMPLEX SCENARIOS ---
+// Multiple characters moving and interacting
+// (Already have some, but ensure no interference)
+
+// --- 18. EDGE CASES I DIDN'T THINK OF ---
+// Empty room descriptions, etc.
+// Commands with extra spaces? But parser trims.
+// Case sensitivity for names? Assume case sensitive.
+// Names with spaces? Probably not, as parsing splits on space.
+// Very long names
+Create Warrior VeryLongCharacterNameThatMightCauseIssuesButProbablyNot
+// Zero bonuses everywhere
+Place Sword ExtraRoom8 0 0 0
+// Maximum reasonable values
+Place Monster MaxMonster ExtraRoom9 999 999 999
+// After character death, can't use them
+// But since deleted, already tested.
+
+// --- END OF TESTS ---
+// Result: Thorin now has [Sword, Shield]. Inventory is now FULL (if Max=2).
+PickUp Thorin Shield
+
+// --- 7. ACTION: SWAP WITH FULL INVENTORY ---
+// Room4 is now empty. Place a massive Shield.
+Place Shield Room4 100 0 100
+// Logic: Thorin should swap his old Shield for this new one.
+PickUp Thorin Shield
+
+// --- 8. VERIFICATION: PICKING UP THE TRASH ---
+// Thorin just dropped a Shield in Room4 and a Sword in Room2.
+// Let's bring in a second character to see if the items are actually on the floor.
+Create Thief Garrett
+Enter Dungeon Garrett
+Move Garrett North
+// Garrett should be able to pick up the Sword Thorin dropped in Room2.
+PickUp Garrett Sword

@@ -1,0 +1,413 @@
+Commands must have at least 3 words - SKIPPING line 107
+Commands must have at least 3 words - SKIPPING line 108
+Commands must have at least 3 words - SKIPPING line 109
+Commands must have at least 3 words - SKIPPING line 110
+Commands must have at least 3 words - SKIPPING line 114
+Commands must have at least 3 words - SKIPPING line 115
+Commands must have at least 3 words - SKIPPING line 132
+196 commands were loaded successfully
+ 🏗️ [BUILD] Room constructed: 'StartRoom'.
+ 🏗️ [BUILD] Room constructed: 'RoomNorth'.
+ 🏗️ [BUILD] Room constructed: 'RoomEast'.
+ 🏗️ [BUILD] Room constructed: 'RoomSouth'.
+ 🏗️ [BUILD] Room constructed: 'RoomWest'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom1'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom2'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom3'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom4'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom5'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom6'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom7'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom8'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom9'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom10'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom11'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom12'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom13'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom14'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom15'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom16'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom17'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom18'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom19'.
+ 🏗️ [BUILD] Room constructed: 'ExtraRoom20'.
+ 🚫 [ERROR] (Line 33) Capacity limit reached: Cannot create more than 25 rooms
+ 🚫 [ERROR] (Line 34) Capacity limit reached: Cannot create more than 25 rooms
+ 🚫 [ERROR] (Line 35) Capacity limit reached: Cannot create more than 25 rooms
+ 🚫 [ERROR] (Line 36) Capacity limit reached: Cannot create more than 25 rooms
+ 🚫 [ERROR] (Line 37) Capacity limit reached: Cannot create more than 25 rooms
+ 🔗 [LINK] Connected 'StartRoom' north ↔ 'RoomNorth'.
+ 🔗 [LINK] Connected 'RoomNorth' east ↔ 'ExtraRoom1'.
+ 🔗 [LINK] Connected 'ExtraRoom1' south ↔ 'ExtraRoom2'.
+ 🔗 [LINK] Connected 'ExtraRoom2' west ↔ 'ExtraRoom3'.
+ 🔗 [LINK] Connected 'ExtraRoom3' north ↔ 'ExtraRoom4'.
+ 🔗 [LINK] Connected 'ExtraRoom4' east ↔ 'ExtraRoom5'.
+ 🔗 [LINK] Connected 'ExtraRoom5' south ↔ 'ExtraRoom6'.
+ 🔗 [LINK] Connected 'ExtraRoom6' west ↔ 'ExtraRoom7'.
+ 🔗 [LINK] Connected 'ExtraRoom7' north ↔ 'ExtraRoom8'.
+ 🔗 [LINK] Connected 'ExtraRoom8' east ↔ 'ExtraRoom9'.
+ 🔗 [LINK] Connected 'ExtraRoom9' south ↔ 'ExtraRoom10'.
+ 🔗 [LINK] Connected 'ExtraRoom10' west ↔ 'ExtraRoom11'.
+ 🔗 [LINK] Connected 'ExtraRoom11' north ↔ 'ExtraRoom12'.
+ 🔗 [LINK] Connected 'ExtraRoom12' east ↔ 'ExtraRoom13'.
+ 🔗 [LINK] Connected 'ExtraRoom13' south ↔ 'ExtraRoom14'.
+ 🔗 [LINK] Connected 'ExtraRoom14' west ↔ 'ExtraRoom15'.
+ 🔗 [LINK] Connected 'ExtraRoom15' north ↔ 'ExtraRoom16'.
+ 🔗 [LINK] Connected 'ExtraRoom16' east ↔ 'ExtraRoom17'.
+ 🔗 [LINK] Connected 'ExtraRoom17' south ↔ 'ExtraRoom18'.
+ 🔗 [LINK] Connected 'ExtraRoom18' west ↔ 'ExtraRoom19'.
+ 🔗 [LINK] Connected 'ExtraRoom19' north ↔ 'ExtraRoom20'.
+ 🚫 [ERROR] (Line 61) Room name 'ExtraRoom21' does not exist
+ 🚫 [ERROR] (Line 62) Room name 'ExtraRoom21' does not exist
+ 🚫 [ERROR] (Line 63) Room name 'ExtraRoom22' does not exist
+ 🚫 [ERROR] (Line 64) Room name 'ExtraRoom23' does not exist
+ 🚫 [ERROR] (Line 65) Room name 'ExtraRoom24' does not exist
+ 🔗 [LINK] Connected 'StartRoom' east ↔ 'RoomEast'.
+ 🔗 [LINK] Connected 'StartRoom' south ↔ 'RoomSouth'.
+ 🔗 [LINK] Connected 'StartRoom' west ↔ 'RoomWest'.
+ 📍 [SETUP] The journey is set to begin at 'StartRoom'.
+ ✨ [CREATION] A new warrior named 'Warrior1' has entered the world.
+ ✨ [CREATION] A new mage named 'Mage1' has entered the world.
+ ✨ [CREATION] A new thief named 'Thief1' has entered the world.
+ ✨ [CREATION] A new warrior named 'Warrior2' has entered the world.
+ ✨ [CREATION] A new mage named 'Mage2' has entered the world.
+ 📦 [ITEM] The 'Sword' was placed in 'StartRoom'. [ +15 STR | +15 DEF ]
+ 📦 [ITEM] The 'Wand' was placed in 'RoomNorth'. [ +25 STR ]
+ 📦 [ITEM] The 'Dagger' was placed in 'RoomEast'. [ +15 STR | +6 DEF ]
+ 📦 [ITEM] The 'Shield' was placed in 'RoomSouth'. [ +15 DEF ]
+ 📦 [ITEM] The 'Health Potion' was placed in 'RoomWest'. [ +30 HP ]
+ 📦 [ITEM] The 'Strength Potion' was placed in 'ExtraRoom1'. [ +10 STR ]
+ 📦 [ITEM] The 'Defense Potion' was placed in 'ExtraRoom2'. [ +13 DEF ]
+ 📦 [ITEM] The 'Sword' was placed in 'ExtraRoom3'. [ +25 STR | +20 DEF ]
+ 📦 [ITEM] The 'Wand' was placed in 'ExtraRoom4'. [ +35 STR | +5 DEF ]
+ 📦 [ITEM] The 'Dagger' was placed in 'ExtraRoom5'. [ +19 STR | +9 DEF ]
+ ⚠️ [SPAWN] A 'Goblin' now lurks in 'StartRoom'!
+   👹 [ENEMY] Goblin
+   ❤️  HP: 50  |  💪 STR: 10  |  🛡️  DEF: 5
+ ⚠️ [SPAWN] A 'Orc' now lurks in 'RoomNorth'!
+   👹 [ENEMY] Orc
+   ❤️  HP: 80  |  💪 STR: 15  |  🛡️  DEF: 10
+ ⚠️ [SPAWN] A 'Troll' now lurks in 'RoomEast'!
+   👹 [ENEMY] Troll
+   ❤️  HP: 120  |  💪 STR: 20  |  🛡️  DEF: 15
+ ⚠️ [SPAWN] A 'Dragon' now lurks in 'RoomSouth'!
+   👹 [ENEMY] Dragon
+   ❤️  HP: 200  |  💪 STR: 30  |  🛡️  DEF: 20
+ ⚠️ [SPAWN] A 'Skeleton' now lurks in 'RoomWest'!
+   👹 [ENEMY] Skeleton
+   ❤️  HP: 40  |  💪 STR: 8  |  🛡️  DEF: 3
+ ⚠️ [SPAWN] A 'Zombie' now lurks in 'ExtraRoom1'!
+   👹 [ENEMY] Zombie
+   ❤️  HP: 60  |  💪 STR: 12  |  🛡️  DEF: 7
+ ⚠️ [SPAWN] A 'Vampire' now lurks in 'ExtraRoom2'!
+   👹 [ENEMY] Vampire
+   ❤️  HP: 100  |  💪 STR: 18  |  🛡️  DEF: 12
+ ⚠️ [SPAWN] A 'Werewolf' now lurks in 'ExtraRoom3'!
+   👹 [ENEMY] Werewolf
+   ❤️  HP: 90  |  💪 STR: 16  |  🛡️  DEF: 9
+ ⚠️ [SPAWN] A 'Ghost' now lurks in 'ExtraRoom4'!
+   👹 [ENEMY] Ghost
+   ❤️  HP: 70  |  💪 STR: 14  |  🛡️  DEF: 8
+ ⚠️ [SPAWN] A 'Minotaur' now lurks in 'ExtraRoom5'!
+   👹 [ENEMY] Minotaur
+   ❤️  HP: 150  |  💪 STR: 25  |  🛡️  DEF: 18
+ 🚫 [ERROR] (Line 111) Invalid number of arguments in the command. Must follow the pattern of "Connect <roomName> <roomName> <direction>"
+ 🚫 [ERROR] (Line 112) Invalid number of arguments in the command. Must follow the pattern of "Place <item> <roomName> <hpBonus> <strBonus> <defBonus>"
+ 🚫 [ERROR] (Line 113) Invalid number of arguments in the command. Must follow the pattern of "Place Monster <name> <roomName> <health> <strength> <defense>"
+ 🚫 [ERROR] (Line 116) Character 'Warrior1' did not enter the dungeon
+ 🚫 [ERROR] (Line 117) Character 'Warrior1' did not enter the dungeon
+ 🚫 [ERROR] (Line 120) Invalid number of arguments in the command. Must follow the pattern of "Create Room <roomName>"
+ 🚫 [ERROR] (Line 121) Invalid number of arguments in the command. Must follow the pattern of "Create <class> <name>"
+ 🚫 [ERROR] (Line 122) Invalid number of arguments in the command. Must follow the pattern of "Set StartRoom <roomName>"
+ 🚫 [ERROR] (Line 123) Invalid number of arguments in the command. Must follow the pattern of "Connect <roomName> <roomName> <direction>"
+ 🚫 [ERROR] (Line 124) Invalid number of arguments in the command. Must follow the pattern of "Place <item> <roomName> <hpBonus> <strBonus> <defBonus>"
+ 🚫 [ERROR] (Line 125) Invalid number of arguments in the command. Must follow the pattern of "Place Monster <name> <roomName> <health> <strength> <defense>"
+ 🚫 [ERROR] (Line 126) Invalid number of arguments in the command. Must follow the pattern of "Enter Dungeon <characterName>"
+ 🚫 [ERROR] (Line 127) Invalid number of arguments in the command. Must follow the pattern of "Move <characterName> <direction>"
+ 🚫 [ERROR] (Line 128) Invalid number of arguments in the command. Must follow the pattern of "Fight <characterName> <monsterName>"
+ 🚫 [ERROR] (Line 129) Invalid number of arguments in the command. Must follow the pattern of "PickUp <characterName> <itemName>"
+ 🚫 [ERROR] (Line 133) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 134) Invalid number of arguments in the command. Must follow the pattern of "Place <item> <roomName> <hpBonus> <strBonus> <defBonus>"
+ 🚫 [ERROR] (Line 135) Invalid number of arguments in the command. Must follow the pattern of "Fight <characterName> <monsterName>"
+ 🚫 [ERROR] (Line 139) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 140) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 141) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 142) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 143) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 144) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 145) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 148) Capacity limit reached: Cannot create more than 25 rooms
+ 🚫 [ERROR] (Line 151) Capacity limit reached: Cannot create more than 10 monsters
+ 🚫 [ERROR] (Line 155) Capacity limit reached: Cannot create more than 25 rooms
+ 🚫 [ERROR] (Line 158) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 161) Monster name 'Goblin' already exists
+ 🚫 [ERROR] (Line 165) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 166) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 167) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 170) Room 'StartRoom' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 171) Room 'RoomNorth' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 172) Room 'RoomEast' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 176) Health, Strength, Defense bonuses must be positive numbers or 0
+ 🚫 [ERROR] (Line 177) Health, Strength, Defense bonuses must be positive numbers or 0
+ 🚫 [ERROR] (Line 178) Health, Strength, Defense bonuses must be positive numbers or 0
+ 📦 [ITEM] The 'Sword' was placed in 'ExtraRoom7'. [ +5 STR | +10 DEF ]
+ 🚫 [ERROR] (Line 184) Health, Strength, Defense bonuses must be positive numbers
+ 🚫 [ERROR] (Line 185) Health, Strength, Defense bonuses must be positive numbers
+ 🚫 [ERROR] (Line 186) Health, Strength, Defense bonuses must be positive numbers
+ 🚫 [ERROR] (Line 189) Can't create a monster with health or strength of 0. Must be a positive integer
+ 🚫 [ERROR] (Line 190) Can't create a monster with health or strength of 0. Must be a positive integer
+ 🚫 [ERROR] (Line 194) Room 'StartRoom' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 197) Room 'RoomNorth' Already has a monster in it. Can't place more than 1 monster in a room
+ 🚫 [ERROR] (Line 201) Room name 'NonExistent' does not exist
+ 🚫 [ERROR] (Line 202) Room name 'NonExistent' does not exist
+ 🚫 [ERROR] (Line 205) Invalid direction. Must be one of [North, East, South, West]
+ 🚫 [ERROR] (Line 206) Invalid direction. Must be one of [North, East, South, West]
+ 🚫 [ERROR] (Line 207) Invalid direction. Must be one of [North, East, South, West]
+ 🚫 [ERROR] (Line 210) Can't connect a room to itself
+ 🚫 [ERROR] (Line 213) Room 'ExtraRoom6' is already connected to another room in the dungeon
+ 🚫 [ERROR] (Line 216) Room 'StartRoom' is already connected to another room in the dungeon
+ 🚫 [ERROR] (Line 220) Room name 'NonExistent' does not exist
+ 📍 [SETUP] The journey is set to begin at 'RoomNorth'.
+ 🚫 [ERROR] (Line 227) Character 'NonExistent' does not exist
+ 🚪 [ENTER] Warrior1 steps into the dungeon. The adventure begins!
+   ---------------------------------------
+   HERO: Warrior1  [Warrior]
+   ❤️  HP:  100
+   💪  STR: 15
+   🛡️  DEF: 10
+   🎒  INVENTORY: [Empty]
+   ---------------------------------------
+
+   📍 [LOCATION] You are currently in 'RoomNorth'.
+      👹 [DANGER] A Orc is guarding this room!
+      ✨ [ITEM] You spot a Wand lying on the ground - [ +25 STR ]
+      🧭 [EXITS]:
+         ➡️  East  -> ExtraRoom1
+         ⬇️  South -> StartRoom
+
+   ---------------------------------------
+
+ 🚫 [ERROR] (Line 231) Character 'Warrior1' already entered the dungeon
+ 🚫 [ERROR] (Line 237) Character 'NonExistent' does not exist
+ 🚫 [ERROR] (Line 240) Character 'Warrior2' did not enter the dungeon
+ 🚫 [ERROR] (Line 243) Invalid direction. Must be one of [North, East, South, West]
+ 👣 [MOVE] Warrior1 marched south into 'StartRoom'.
+
+   📍 [LOCATION] You are currently in 'StartRoom'.
+      👹 [DANGER] A Goblin is guarding this room!
+      ✨ [ITEM] You spot a Sword lying on the ground - [ +15 STR | +15 DEF ]
+      🧭 [EXITS]:
+         ⬆️  North -> RoomNorth
+         ➡️  East  -> RoomEast
+         ⬇️  South -> RoomSouth
+         ⬅️  West  -> RoomWest
+
+ 🚫 [ERROR] (Line 250) Character 'NonExistent' does not exist
+ 🚫 [ERROR] (Line 253) Monster 'NonExistent' does not exist
+ 🚫 [ERROR] (Line 256) The monster 'Orc' is not in the same room as the character (StartRoom)
+ 🚫 [ERROR] (Line 260) Character 'NonExistent' does not exist
+ 🚫 [ERROR] (Line 263) Item name 'Axe' is invalid
+ 🎒 [LOOT] Warrior1 equipped the Sword - [ +15 STR | +15 DEF ]
+ 🚫 [ERROR] (Line 269) There is no item in StartRoom for Warrior1 to pick up
+ 🚫 [ERROR] (Line 272) There is no item in StartRoom for Warrior1 to pick up
+ 🚫 [ERROR] (Line 276) Character 'Warrior1' already entered the dungeon
+ 🚫 [ERROR] (Line 277) There is no item in StartRoom for Warrior1 to pick up
+ 🚫 [ERROR] (Line 280) There is no item in StartRoom for Warrior1 to pick up
+ 🚪 [ENTER] Mage1 steps into the dungeon. The adventure begins!
+   ---------------------------------------
+   HERO: Mage1  [Mage]
+   ❤️  HP:  40
+   💪  STR: 25
+   🛡️  DEF: 5
+   🎒  INVENTORY: [Empty]
+   ---------------------------------------
+
+   📍 [LOCATION] You are currently in 'RoomNorth'.
+      👹 [DANGER] A Orc is guarding this room!
+      ✨ [ITEM] You spot a Wand lying on the ground - [ +25 STR ]
+      🧭 [EXITS]:
+         ➡️  East  -> ExtraRoom1
+         ⬇️  South -> StartRoom
+
+   ---------------------------------------
+
+ 🚫 [ERROR] (Line 284) Character 'Mage1' attempted to move north. Cannot move that way; the path is blocked
+ 🎒 [LOOT] Mage1 equipped the Wand - [ +25 STR ]
+ 🚫 [ERROR] (Line 288) There is no item in RoomNorth for Mage1 to pick up
+ 🚪 [ENTER] Thief1 steps into the dungeon. The adventure begins!
+   ---------------------------------------
+   HERO: Thief1  [Thief]
+   ❤️  HP:  60
+   💪  STR: 20
+   🛡️  DEF: 7
+   🎒  INVENTORY: [Empty]
+   ---------------------------------------
+
+   📍 [LOCATION] You are currently in 'RoomNorth'.
+      👹 [DANGER] A Orc is guarding this room!
+      🧭 [EXITS]:
+         ➡️  East  -> ExtraRoom1
+         ⬇️  South -> StartRoom
+
+   ---------------------------------------
+
+ 👣 [MOVE] Thief1 marched east into 'ExtraRoom1'.
+
+   📍 [LOCATION] You are currently in 'ExtraRoom1'.
+      👹 [DANGER] A Zombie is guarding this room!
+      ✨ [ITEM] You spot a Strength Potion lying on the ground - [ +10 STR ]
+      🧭 [EXITS]:
+         ⬇️  South -> ExtraRoom2
+         ⬅️  West  -> RoomNorth
+
+ 🚫 [ERROR] (Line 293) Item 'Dagger' is not in the same room as the character
+ 🚫 [ERROR] (Line 296) Item 'Sword' is not in the same room as the character
+ 👣 [MOVE] Warrior1 marched east into 'RoomEast'.
+
+   📍 [LOCATION] You are currently in 'RoomEast'.
+      👹 [DANGER] A Troll is guarding this room!
+      ✨ [ITEM] You spot a Dagger lying on the ground - [ +15 STR | +6 DEF ]
+      🧭 [EXITS]:
+         ⬅️  West  -> StartRoom
+
+ 🚫 [ERROR] (Line 301) Character of class 'Warrior' can't pick up a Dagger
+ 🚫 [ERROR] (Line 304) Room 'RoomEast' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 305) Item 'Sword' is not in the same room as the character
+ 🚫 [ERROR] (Line 308) Room 'RoomEast' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 309) Item 'Sword' is not in the same room as the character
+ 🚫 [ERROR] (Line 312) Character 'Warrior1' attempted to move south. Cannot move that way; the path is blocked
+ 🚫 [ERROR] (Line 313) Item 'Shield' is not in the same room as the character
+ 🚫 [ERROR] (Line 316) Room 'RoomSouth' already contains an item. Can't place more than 1 item in a room
+ 🚫 [ERROR] (Line 317) Item 'Sword' is not in the same room as the character
+ 👣 [MOVE] Warrior1 marched west into 'StartRoom'.
+
+   📍 [LOCATION] You are currently in 'StartRoom'.
+      👹 [DANGER] A Goblin is guarding this room!
+      🧭 [EXITS]:
+         ⬆️  North -> RoomNorth
+         ➡️  East  -> RoomEast
+         ⬇️  South -> RoomSouth
+         ⬅️  West  -> RoomWest
+
+ 🚫 [ERROR] (Line 321) There is no item in StartRoom for Warrior1 to pick up
+
+          ⚔️  [COMBAT STARTED]  ⚔️
+   ---------------------------------------
+   👹 [ENEMY] Goblin
+   ❤️  HP: 50  |  💪 STR: 10  |  🛡️  DEF: 5
+   ---------------------------------------
+                     VS.
+   ---------------------------------------
+   HERO: Warrior1  [Warrior]
+   ❤️  HP:  100
+   💪  STR: 15
+   🛡️  DEF: 10
+   🎒  INVENTORY:
+      • Sword ([ +15 STR | +15 DEF ])
+   ---------------------------------------
+
+   🗡️  [PLAYER] Warrior1 attacks Goblin >> Dealt 25 DMG (Enemy HP: 25)
+   ⚔️  [ATTACK] Goblin strikes Warrior1 for 1 damage! (Warrior1 HP: 99)
+   🗡️  [PLAYER] Warrior1 attacks Goblin >> Dealt 25 DMG (Enemy HP: 0)
+   🏆  [VICTORY] Warrior1 has slain the Goblin!
+
+   ---------------------------------------
+
+ 🚪 [ENTER] Warrior2 steps into the dungeon. The adventure begins!
+   ---------------------------------------
+   HERO: Warrior2  [Warrior]
+   ❤️  HP:  100
+   💪  STR: 15
+   🛡️  DEF: 10
+   🎒  INVENTORY: [Empty]
+   ---------------------------------------
+
+   📍 [LOCATION] You are currently in 'RoomNorth'.
+      👹 [DANGER] A Orc is guarding this room!
+      🧭 [EXITS]:
+         ➡️  East  -> ExtraRoom1
+         ⬇️  South -> StartRoom
+
+   ---------------------------------------
+
+ 🚫 [ERROR] (Line 329) The monster 'Dragon' is not in the same room as the character (RoomNorth)
+ 🚪 [ENTER] Mage2 steps into the dungeon. The adventure begins!
+   ---------------------------------------
+   HERO: Mage2  [Mage]
+   ❤️  HP:  40
+   💪  STR: 25
+   🛡️  DEF: 5
+   🎒  INVENTORY: [Empty]
+   ---------------------------------------
+
+   📍 [LOCATION] You are currently in 'RoomNorth'.
+      👹 [DANGER] A Orc is guarding this room!
+      🧭 [EXITS]:
+         ➡️  East  -> ExtraRoom1
+         ⬇️  South -> StartRoom
+
+   ---------------------------------------
+
+ 🚫 [ERROR] (Line 333) Character 'Mage2' attempted to move north. Cannot move that way; the path is blocked
+
+          ⚔️  [COMBAT STARTED]  ⚔️
+   ---------------------------------------
+   👹 [ENEMY] Orc
+   ❤️  HP: 80  |  💪 STR: 15  |  🛡️  DEF: 10
+   ---------------------------------------
+                     VS.
+   ---------------------------------------
+   HERO: Mage2  [Mage]
+   ❤️  HP:  40
+   💪  STR: 25
+   🛡️  DEF: 5
+   🎒  INVENTORY: [Empty]
+   ---------------------------------------
+
+   🗡️  [PLAYER] Mage2 attacks Orc >> Dealt 15 DMG (Enemy HP: 65)
+   ⚔️  [ATTACK] Orc strikes Mage2 for 10 damage! (Mage2 HP: 30)
+   🗡️  [PLAYER] Mage2 attacks Orc >> Dealt 15 DMG (Enemy HP: 50)
+   ⚔️  [ATTACK] Orc strikes Mage2 for 10 damage! (Mage2 HP: 20)
+   🗡️  [PLAYER] Mage2 attacks Orc >> Dealt 15 DMG (Enemy HP: 35)
+   ⚔️  [ATTACK] Orc strikes Mage2 for 10 damage! (Mage2 HP: 10)
+   🗡️  [PLAYER] Mage2 attacks Orc >> Dealt 15 DMG (Enemy HP: 20)
+   ⚔️  [ATTACK] Orc strikes Mage2 for 10 damage! (Mage2 HP: 0)
+   🗡️  [PLAYER] Mage2 attacks Orc >> Dealt 15 DMG (Enemy HP: 5)
+   ⚔️  [ATTACK] Orc strikes Mage2 for 10 damage! (Mage2 HP: -10)
+   💀  [DEFEAT] Mage2 has fallen to the Orc...
+
+   ---------------------------------------
+
+ ✨ [CREATION] A new warrior named 'VeryLongCharacterNameThatMightCauseIssuesButProbablyNot' has entered the world.
+ 📦 [ITEM] The 'Sword' was placed in 'ExtraRoom8'. [ +5 STR | +10 DEF ]
+ ⚠️ [SPAWN] A 'MaxMonster' now lurks in 'ExtraRoom9'!
+   👹 [ENEMY] MaxMonster
+   ❤️  HP: 999  |  💪 STR: 999  |  🛡️  DEF: 999
+ 🚫 [ERROR] (Line 356) Character 'Thorin' does not exist
+ 🚫 [ERROR] (Line 360) Room name 'Room4' does not exist
+ 🚫 [ERROR] (Line 362) Character 'Thorin' does not exist
+ 🚫 [ERROR] (Line 367) Capacity limit reached: Cannot create more than 5 characters
+ 🚫 [ERROR] (Line 368) Character 'Garrett' does not exist
+ 🚫 [ERROR] (Line 369) Character 'Garrett' does not exist
+ 🚫 [ERROR] (Line 371) Character 'Garrett' does not exist
+
+==========================================
+         📜  DUNGEON CHRONICLE  📜        
+==========================================
+
+   HERO: Warrior1  [Warrior]
+   ❤️  HP:  99
+
+   HERO: Mage1  [Mage]
+   ❤️  HP:  40
+
+   HERO: Thief1  [Thief]
+   ❤️  HP:  60
+
+   HERO: Warrior2  [Warrior]
+   ❤️  HP:  100
+
+   HERO: VeryLongCharacterNameThatMightCauseIssuesButProbablyNot  [Warrior]
+   ❤️  HP:  100
+==========================================
+
