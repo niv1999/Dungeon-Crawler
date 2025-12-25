@@ -7,11 +7,12 @@
 using namespace std;
 
 // Ctor
-Monster::Monster(const string &name, int health, int strength, int defense) : name(name),
-                                                                              health(health),
-                                                                              strength(strength),
-                                                                              defense(defense),
-                                                                              combatRoundMsg("")
+Monster::Monster(const string &name, int health, int strength, int defense) : 
+name(name),                                                                              
+health(health),                                                                              
+strength(strength),                                                                              
+defense(defense),                                                                              
+combatRoundMsg("")
 {
 }
 
@@ -22,7 +23,6 @@ void Monster::attack(Character& target)
     target.defend(this->strength);
     int dmgDealt = targetInitialHp - target.getHealth();
     
-    // New Format: [ATTACK] Goblin hits Thorin for 5 damage! (Thorin HP: 95)
     string msg = "   ⚔️  [ATTACK] " + this->name + " strikes " + target.getName();
     msg += " for " + to_string(dmgDealt) + " damage! ";
     msg += "(" + target.getName() + " HP: " + to_string(target.getHealth()) + ")";

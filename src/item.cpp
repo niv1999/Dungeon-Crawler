@@ -6,10 +6,11 @@
 using namespace std;
 
 // Ctor
-Item::Item(const string &name, int hBonus, int sBonus, int dBonus) : name(name),
-                                                                     healthBonus(hBonus),
-                                                                     strengthBonus(sBonus),
-                                                                     defenseBonus(dBonus)
+Item::Item(const string &name, int hBonus, int sBonus, int dBonus) :
+name(name),                                                                     
+healthBonus(hBonus),                                                                     
+strengthBonus(sBonus),                                                                     
+defenseBonus(dBonus)
 {}
 
 // Dtor

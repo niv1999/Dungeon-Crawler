@@ -10,13 +10,14 @@
 using namespace std;
 
 // Ctor
-Game::Game() : dungeon(),
-               commands(nullptr),
-               cmdCount(0),
-               cmdCapacity(0),
-               gameMessages(nullptr),
-               msgCount(0),
-               msgCapacity(0)
+Game::Game() : 
+dungeon(),              
+commands(nullptr),              
+cmdCount(0),             
+cmdCapacity(0),             
+gameMessages(nullptr),              
+msgCount(0),              
+msgCapacity(0)
 {
 }
 

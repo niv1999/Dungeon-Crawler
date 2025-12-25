@@ -7,13 +7,14 @@
 using namespace std;
 
 // Ctor
-Room::Room(const string& name) : name(name),
-                                 item(nullptr),
-                                 monster(nullptr),
-                                 north(nullptr),
-                                 south(nullptr),
-                                 east(nullptr),
-                                 west(nullptr)
+Room::Room(const string& name) : 
+name(name),                                 
+item(nullptr),                                 
+monster(nullptr),                                 
+north(nullptr),                                
+south(nullptr),                                
+east(nullptr),                          
+west(nullptr)
 {
 }
 
@@ -126,7 +127,7 @@ string Room::getDescription() const
     }
 
     if (!hasExit) {
-        desc += "         🚫 None (Dead End)\n";
+        desc += "         🚫 None (Isolated Room)\n";
     }
 
     return desc;

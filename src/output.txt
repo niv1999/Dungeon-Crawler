@@ -171,12 +171,14 @@ Commands must have at least 3 words - SKIPPING line 132
  🚫 [ERROR] (Line 227) Character 'NonExistent' does not exist
  🚪 [ENTER] Warrior1 steps into the dungeon. The adventure begins!
    ---------------------------------------
+
    HERO: Warrior1  [Warrior]
    ❤️  HP:  100
    💪  STR: 15
    🛡️  DEF: 10
    🎒  INVENTORY: [Empty]
    ---------------------------------------
+
 
    📍 [LOCATION] You are currently in 'RoomNorth'.
       👹 [DANGER] A Orc is guarding this room!
@@ -215,12 +217,14 @@ Commands must have at least 3 words - SKIPPING line 132
  🚫 [ERROR] (Line 280) There is no item in StartRoom for Warrior1 to pick up
  🚪 [ENTER] Mage1 steps into the dungeon. The adventure begins!
    ---------------------------------------
+
    HERO: Mage1  [Mage]
    ❤️  HP:  40
    💪  STR: 25
    🛡️  DEF: 5
    🎒  INVENTORY: [Empty]
    ---------------------------------------
+
 
    📍 [LOCATION] You are currently in 'RoomNorth'.
       👹 [DANGER] A Orc is guarding this room!
@@ -236,12 +240,14 @@ Commands must have at least 3 words - SKIPPING line 132
  🚫 [ERROR] (Line 288) There is no item in RoomNorth for Mage1 to pick up
  🚪 [ENTER] Thief1 steps into the dungeon. The adventure begins!
    ---------------------------------------
+
    HERO: Thief1  [Thief]
    ❤️  HP:  60
    💪  STR: 20
    🛡️  DEF: 7
    🎒  INVENTORY: [Empty]
    ---------------------------------------
+
 
    📍 [LOCATION] You are currently in 'RoomNorth'.
       👹 [DANGER] A Orc is guarding this room!
@@ -298,6 +304,7 @@ Commands must have at least 3 words - SKIPPING line 132
    ---------------------------------------
                      VS.
    ---------------------------------------
+
    HERO: Warrior1  [Warrior]
    ❤️  HP:  100
    💪  STR: 15
@@ -305,6 +312,7 @@ Commands must have at least 3 words - SKIPPING line 132
    🎒  INVENTORY:
       • Sword ([ +15 STR | +15 DEF ])
    ---------------------------------------
+
 
    🗡️  [PLAYER] Warrior1 attacks Goblin >> Dealt 25 DMG (Enemy HP: 25)
    ⚔️  [ATTACK] Goblin strikes Warrior1 for 1 damage! (Warrior1 HP: 99)
@@ -315,12 +323,14 @@ Commands must have at least 3 words - SKIPPING line 132
 
  🚪 [ENTER] Warrior2 steps into the dungeon. The adventure begins!
    ---------------------------------------
+
    HERO: Warrior2  [Warrior]
    ❤️  HP:  100
    💪  STR: 15
    🛡️  DEF: 10
    🎒  INVENTORY: [Empty]
    ---------------------------------------
+
 
    📍 [LOCATION] You are currently in 'RoomNorth'.
       👹 [DANGER] A Orc is guarding this room!
@@ -333,12 +343,14 @@ Commands must have at least 3 words - SKIPPING line 132
  🚫 [ERROR] (Line 329) The monster 'Dragon' is not in the same room as the character (RoomNorth)
  🚪 [ENTER] Mage2 steps into the dungeon. The adventure begins!
    ---------------------------------------
+
    HERO: Mage2  [Mage]
    ❤️  HP:  40
    💪  STR: 25
    🛡️  DEF: 5
    🎒  INVENTORY: [Empty]
    ---------------------------------------
+
 
    📍 [LOCATION] You are currently in 'RoomNorth'.
       👹 [DANGER] A Orc is guarding this room!
@@ -357,12 +369,14 @@ Commands must have at least 3 words - SKIPPING line 132
    ---------------------------------------
                      VS.
    ---------------------------------------
+
    HERO: Mage2  [Mage]
    ❤️  HP:  40
    💪  STR: 25
    🛡️  DEF: 5
    🎒  INVENTORY: [Empty]
    ---------------------------------------
+
 
    🗡️  [PLAYER] Mage2 attacks Orc >> Dealt 15 DMG (Enemy HP: 65)
    ⚔️  [ATTACK] Orc strikes Mage2 for 10 damage! (Mage2 HP: 30)

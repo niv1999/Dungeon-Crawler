@@ -7,13 +7,14 @@
 using namespace std;
 
 // Ctor
-Dungeon::Dungeon() : characters{},
-                     characterCount(0),
-                     monsters{},
-                     monsterCount(0),
-                     rooms{},
-                     roomsCount(0),
-                     startRoom(nullptr)
+Dungeon::Dungeon() : 
+characters{},                     
+characterCount(0),                   
+monsters{},                     
+monsterCount(0),                    
+rooms{},                    
+roomsCount(0),                    
+startRoom(nullptr)
 {
 }
 
@@ -132,10 +133,8 @@ string Dungeon::gameState() const
     for(int i = 0; i < characterCount; i++)
     {
         Character* c = characters[i];
-        // Matches your character sheet style
         msg += "\n   HERO: " + c->getName() + "  [" + c->getClass() + "]\n";
-        msg += "   ❤️  HP:  " + std::to_string(c->getHealth()) + "\n";
-        // Only show inventory count here to keep it brief, or full stats if you prefer
+        msg += "   ❤️  HP:  " + to_string(c->getHealth()) + "\n";
     }
     msg += "==========================================\n";
     return msg;

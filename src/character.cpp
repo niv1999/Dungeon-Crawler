@@ -7,15 +7,16 @@
 using namespace std;
 
 // Ctor
-Character::Character(const std::string &name, int health, int strength, int defense) : name(name),
-                                                                     health(health),
-                                                                     strength(strength),
-                                                                     defense(defense),
-                                                                     inventory{},
-                                                                     inventoryCount(0),
-                                                                     currentRoom(nullptr),
-                                                                     itemActionMsg(""),
-                                                                     combatRoundMsg("")
+Character::Character(const std::string &name, int health, int strength, int defense) : 
+name(name),
+health(health),
+strength(strength),
+defense(defense),
+inventory{},
+inventoryCount(0),
+currentRoom(nullptr),
+itemActionMsg(""),
+combatRoundMsg("")
 {
 }
 
@@ -154,7 +155,7 @@ string Character::getName() const
 
 int Character::getHealth() const
 {
-    return this->health;
+    return this->health >= 0 ? this->health : 0;
 }
 
 Room* Character::getCurrentRoom() const
