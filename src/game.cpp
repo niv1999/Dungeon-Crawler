@@ -1,3 +1,6 @@
+// Matan Shtar 324125350
+// Niv Shteingart 314830365
+
 #include "game.hpp"
 #include "utils.hpp"
 #include <iostream>
