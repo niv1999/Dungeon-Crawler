@@ -360,6 +360,9 @@ string Game::executePickUp(const Command &cmd)
     if (character == nullptr)
         return Utils::buildErrMsg(cmd.lineNumber, "Character '" + cmd.words[1] + "' does not exist");
 
+    if (character->getCurrentRoom() == nullptr)
+        return Utils::buildErrMsg(cmd.lineNumber, "Character '" + character->getName() + "' did not enter the dungeon");
+
     ItemEnum itemName = Utils::itemStringToEnum(cmd.words[2]);
     if (itemName == ItemEnum::UNKNOWN)
         return Utils::buildErrMsg(cmd.lineNumber, "Item name '" + cmd.words[2] + "' is invalid");
