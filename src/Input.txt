@@ -1,0 +1,122 @@
+// ==========================================
+//      DUNGEON STRESS TEST INPUT FILE
+// ==========================================
+
+// --- SECTION 1: WORLD BUILDING ---
+cReAtE rOoM Entrance        // Messy caps (should work)
+Create Room Hallway         // Normal caps
+Create Room Armory
+Create Room Library
+Create Room BossLair
+Create Room Void            // An isolated room
+
+// Edge Case: Creating a duplicate room (Should Error)
+Create Room Entrance
+
+// --- SECTION 2: CONNECTIONS ---
+Connect Entrance Hallway North
+Connect Hallway Armory East
+Connect Hallway Library West
+Connect Hallway BossLair North
+
+// Edge Case: Connecting to a non-existent room (Should Error)
+Connect Hallway Narnia East
+
+// Edge Case: Invalid Direction (Should Error)
+Connect Armory Void Up
+
+// --- SECTION 3: POPULATION (CHARACTERS) ---
+Create Warrior Thorin
+Create Mage Merlin
+Create Thief Garrett
+
+// Edge Case: Unknown Class (Should Error)
+Create Paladin Uther
+
+// Edge Case: Duplicate Name (Should Error)
+Create Mage Thorin
+
+// --- SECTION 4: LOOT DISTRIBUTION ---
+// Syntax: Place <ItemName> <RoomName> <HP> <STR> <DEF>
+Place Sword Armory 0 10 5
+Place Wand Library 0 15 2
+Place Dagger Entrance 0 5 5
+Place HealthPotion Hallway 50 0 0
+
+// Edge Case: Placing Item in non-existent room (Should Error)
+Place Shield Narnia 0 10 10
+
+// Edge Case: Negative Stats (Should Error)
+Place Sword Void -10 -5 0
+
+// Edge Case: Placing 2nd item in same room (Should Error - Hallway has Potion)
+Place Shield Hallway 0 10 10
+
+// --- SECTION 5: THREATS (MONSTERS) ---
+// Note: "Place Monster" still requires the word 'Monster' 
+// because your Utils::extractCommandType looks for it specifically.
+Place Monster Rat Entrance 10 2 0           
+Place Monster Dragon BossLair 200 25 10     
+
+// Edge Case: Monster with 0 health (Should Error)
+Place Monster Ghost Library 0 5 0
+
+// ==========================================
+//          GAMEPLAY SCENARIOS
+// ==========================================
+
+Set StartRoom Entrance
+
+// --- SCENARIO A: THE THIEF ---
+Enter Dungeon Garrett
+
+// 1. Pick up item in start room
+PickUp Garrett Dagger
+
+// 2. Move to Hallway
+Move Garrett North
+
+// 3. Try to move into a wall (Should Error)
+Move Garrett East 
+
+// 4. Consume Potion (Should boost stats and disappear)
+PickUp Garrett HealthPotion
+
+// 5. Move to Armory (Contains Sword)
+Move Garrett East
+
+// 6. Thief can't use Sword (Should Error)
+PickUp Garrett Sword
+
+// --- SCENARIO B: THE WARRIOR ---
+Enter Dungeon Thorin
+
+// 1. Fight the Rat immediately
+Fight Thorin Rat
+
+// 2. Move North -> East to get Sword
+Move Thorin North
+Move Thorin East
+PickUp Thorin Sword
+
+// 3. Back track
+Move Thorin West
+
+// --- SCENARIO C: THE MAGE (DEATH TEST) ---
+Enter Dungeon Merlin
+
+// 1. Move North -> West to get Wand
+Move Merlin North
+Move Merlin West
+PickUp Merlin Wand
+
+// 2. Go to Boss Lair
+Move Merlin East
+Move Merlin North
+
+// 3. Fight Dragon (Expected: DEFEAT)
+Fight Merlin Dragon
+
+// --- SCENARIO D: POST-DEATH LOGIC ---
+// Edge Case: Move dead character (Should Error)
+Move Merlin South
