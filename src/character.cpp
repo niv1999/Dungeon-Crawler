@@ -67,7 +67,7 @@ bool Character::isAlive() const
     for(int i = 0; i < inventoryCount; i++) {
         totalHp += inventory[i]->getHealthBonus();
     }
-    return totalHp >= 0;
+    return totalHp > 0;
 }
 
 // Pick up an item and equip or consume it
