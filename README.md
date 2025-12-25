@@ -45,6 +45,45 @@ Although all files reside in the root directory, they are logically categorized 
 
 ---
 
+## 📜 Command Reference
+
+The engine processes commands line-by-line from the input file. Below is the required schema for every supported action.
+
+### 🏗 World Construction
+| Command | Schema | Description |
+| :--- | :--- | :--- |
+| **Create Room** | `Create Room <RoomName>` | Defines a new location (Max 25 rooms). |
+| **Connect** | `Connect <Room1> <Room2> <Direction>` | Links two rooms via `North`, `South`, `East`, or `West`. |
+| **Set Start** | `Set StartRoom <RoomName>` | Defines where all characters begin the game. |
+
+### 👤 Entity Placement
+| Command | Schema | Description |
+| :--- | :--- | :--- |
+| **Create Character** | `Create <Class> <Name>` | Creates a `Warrior`, `Mage`, or `Thief` (Max 5 characters). |
+| **Place Item** | `Place <ItemName> <RoomName> <HP> <STR> <DEF>` | Spawns a `Sword`, `Wand`, `Dagger`, `Shield`, or `HealthPotion`. |
+| **Place Monster** | `Place Monster <Name> <RoomName> <HP> <STR> <DEF>` | Spawns an enemy in a specific room (Max 10 monsters). |
+
+### ⚔️ Gameplay Actions
+| Command | Schema | Description |
+| :--- | :--- | :--- |
+| **Enter** | `Enter Dungeon <CharacterName>` | Places a created character into the Start Room. |
+| **Move** | `Move <CharacterName> <Direction>` | Moves the character to an adjacent room. |
+| **PickUp** | `PickUp <CharacterName> <ItemName>` | Attempts to take an item (Checks class compatibility and stats). |
+| **Fight** | `Fight <CharacterName> <MonsterName>` | Initiates turn-based combat in the current room. |
+
+
+### 💡 Schema Notes
+* **Case Sensitivity:** Commands like `Create Room` are case-insensitive (e.g., `cReAtE rOoM` works), but **Entity Names** (e.g., `Thorin`, `Room01`) are case-sensitive.
+* **Item Compatibility:** * **Warriors:** Can equip Swords and Shields.
+    * **Mages:** Can equip Wands.
+    * **Thieves:** Can equip Daggers.
+* **Inventory Logic:**
+    * **Consumables:** Potions are used instantly upon pickup and do not occupy a slot.
+    * **Automatic Swapping:** If a character picks up a superior item of the same type, they automatically swap; if the new item is weaker, they keep their current gear.
+    * **Room Limits:** Each room can hold only **one** item at a time. Picking up an item clears the room slot.
+
+---
+
 ## ⚙️ How to Build and Run
 
 ### Prerequisites
