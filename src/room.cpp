@@ -67,6 +67,11 @@ bool Room::isLinked() const
 // Setters -
 void Room::setItem(Item* item)
 {
+    if(item == nullptr)
+    {
+        delete this->item;
+    }
+    
     this->item = item;
 }
 
